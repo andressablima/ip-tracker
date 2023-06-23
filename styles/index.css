@@ -6,14 +6,13 @@
 }
 
 main{
-    background-image: url(./images/pattern-bg-mobile.png);
+    background-image: url(../images/pattern-bg-mobile.png);
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     position: absolute;
     display: flex;
     flex-direction: column;
-
 }
 
 header{
@@ -24,6 +23,7 @@ header{
     align-items: center;
     color: #fff;
     padding-top: 10vh;
+ 
 }
 
 .ip-sec{
@@ -49,10 +49,13 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     background-color: hsl(0, 0%, 17%);
-    width: 30px;
+    width: 33px;
     height: 5vh;
     border: none;
     border-radius: 5px;
+    position: relative;
+    top: -5vh;
+    left: 38vw;
 }
 
 .ip-results{
@@ -65,10 +68,16 @@ header{
     justify-content: center;
     align-items: center;
     margin: 15px 35px;
+    position: relative;
+    top: 2vh;
 }
 
+/* map */
+#map{
+    position: relative;
 
-
+    height: 550px;
+}
 
 
 
