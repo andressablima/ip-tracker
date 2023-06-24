@@ -45,7 +45,7 @@ header{
     color: hsl(0, 0%, 17%);
 }
 .ip-btn{
-    background-image: url(./images/icon-arrow.svg);
+    background-image: url(../images/icon-arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: hsl(0, 0%, 17%);
@@ -75,9 +75,40 @@ header{
 /* map */
 #map{
     position: relative;
-
     height: 550px;
 }
 
+@media only screen and (min-width: 1000px){
+    main{
+        background-image: url(../images/pattern-bg-desktop.png);
+    }
+    header{
+        padding: 8vh 0;
+    }
+    #ip-add{
+        width: 40vw;
+    }
+    ::placeholder{
+        padding-left: 14px;
+        font-size: 18px;
+    }
+    .ip-btn{
+        background-image: url(../images/icon-arrow.svg);
+        width: 45px;
+        left: 22vw;
+    }
+    .ip-results{
+        border-radius: 8px;
+        width: 50vw;
+        height: 30vh;
+        margin: 0 26vw;
 
+    }
+    #map{
+        position: relative;
+        top: -10vh;
+        height: 650px;
+    }
+
+}
 
