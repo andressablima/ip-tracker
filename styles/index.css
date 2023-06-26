@@ -57,25 +57,35 @@ header{
     top: -5vh;
     left: 38vw;
 }
+/* RESULTS */
+.map-result{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
 
 .ip-results{
-    border-radius: 5px;
-    background-color: #f4ecec;
+    border-radius: 10px;
+    background-color: #fff;
     width: 80%;
-    height: 30vh;
+    height: 110px;
+    margin: 0px 35px;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 15px 35px;
-    position: relative;
-    top: 2vh;
+}
+.ip-results p{
+    margin-bottom: px;
 }
 
 /* map */
 #map{
-    position: relative;
-    height: 550px;
+    position: absolute;
+    width: 100%;
+    height: 400px;
 }
 
 @media only screen and (min-width: 1000px){
@@ -97,17 +107,26 @@ header{
         width: 45px;
         left: 22vw;
     }
+    .map-result{
+        width: 100%;
+        height: 800px;
+    }
     .ip-results{
         border-radius: 8px;
+        background-color: azure;
         width: 50vw;
-        height: 30vh;
+        height: 100px;
         margin: 0 26vw;
-
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     #map{
-        position: relative;
-        top: -10vh;
-        height: 650px;
+        position: absolute;
+        width: 100%;
+        height: 600px;
     }
 
 }
