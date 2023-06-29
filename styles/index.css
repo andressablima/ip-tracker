@@ -36,6 +36,7 @@ main{
 .ip-icon{
     padding: 5px;
     min-width: 280px;
+    height: 5vh;
     border-radius: 10px;
     border: none;
 }
@@ -45,7 +46,8 @@ main{
     background-position: center;
     background-color: hsl(0, 0%, 17%);
     width: 33px;
-    height: 4vh;
+    height: 5vh;
+    left: 66vw;
     border: none;
     border-radius: 0 10px 10px 0;
     position: absolute;
@@ -65,12 +67,12 @@ main{
     justify-content: center;
     margin-top: -30px;
     background-color: #fff;
-    max-width: 80%;
+    max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0,0,0,0.2);
-    min-height: 130px;
+    height: 180px;
     position: relative;
     z-index: 1000;
     padding: 30px;
@@ -78,7 +80,7 @@ main{
 
 .info-block{
     border-bottom: 1px solid;
-    height: 80px; /*REVER PÓS JAVASCRIPT*/
+    height: 80px; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -102,9 +104,11 @@ span.results{
 #map{
     margin-top: -90vh;
     width: 100%;
-    height: 500px;
+    height: 600px;
 }
-
+.leaflet-control-zoom, .leaflet-bar,.leaflet-control{
+    top: 35vh;
+}
 @media only screen and (min-width: 1000px){
     .ip-sec{
         background-image: url(../images/pattern-bg-desktop.png);
@@ -122,34 +126,39 @@ span.results{
         height: 5vh;
     }
     .ip-btn{
-        background-image: url(../images/icon-arrow.svg);
-        width: 45px;
-        height: 5vh;
-        border: none;
-        border-radius: 0 10px 10px 0;
-        left: 30vw;
+        width: 46px;
+        height: 5.25vh;
+        left: 28vw;
         top: -1px;
     }
     .map-result{
         width: 100%;
-        height: 800px;
+        height: 600px;
     }
     .ip-results{
-        border-radius: 8px;
-        background-color: azure;
         width: 50vw;
         height: 100px;
-        margin: 0 26vw;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin: 10 26vw;
+        margin-top: 10px;
+    }
+    .muted-title{
+        font-size: 12px;
+    }
+    span.results{
+        font-size: 15px;
     }
     #map{
         width: 100%;
-        height: 600px;
+        height: 400px;
+        margin-top: -105vh;
     }
 
 }
 
+@media only screen and (min-width: 1438px){
+    #map{
+        margin-top: -67vh;
+        height: 680px;
+    }
+
+}
