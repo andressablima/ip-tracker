@@ -10,25 +10,38 @@
   
   <title>Frontend Mentor | IP Address Tracker</title>
   <link rel="stylesheet" href="./styles/index.css">
+  <script src="./scripts/script.js" defer></script>
 </head>
 <body>
-  <main>
-    <header>
-      <h2>IP Address Tracker</h2>
-    </header>
+  <main class="ip-container">
     <div class="ip-sec">
-      <input type="text" id="ip-add" class="ip-icon" placeholder="Search for any IP address or domain">
-      <input type="button" class="ip-btn">
+      <h2>IP Address Tracker</h2>
+      <form class="elements"> 
+        <input type="text" id="ip-add" class="ip-icon" placeholder="Search for any IP address or domain">
+        <button id="search-btn" class="btn ip-btn"></button>
+      </form>
     </div>
     <div class="map-result">
       <div class="ip-results">
-        <p>IP Address: <span class="ip-address"> </span></p>
-        <p> Location: <span class="location"> </span> </p>
-        <p>Timezone: <span class="timezone"> </span></p>
-        <p>ISP: <span class="isp"> </span></p>
+        <div class="info-block block-seperator">
+          <h4 class="muted-title">IP Address</h4>
+          <span id="current-ip" class="results">192.0.0.0</span>
+        </div>
+        <div class="info-block block-seperator">
+          <h4 class="muted-title">Location </h4>
+          <span id="current-town" class="results">São Paulo, SP</span>
+        </div>
+        <div class="info-block block-seperator">
+          <h4 class="muted-title">Timezone </h4>
+          <span id="current-zone" class="results">UTC +0.00</span>
+        </div>
+        <div class="info-block block-seperator">
+          <h4 class="muted-title">ISP: </h4>
+          <span id="current-isp" class="results">Rain</span>
+        </div>
       </div>
-      <div id="map" class="map-part"></div>
     </div>
+    <div id="map" class="map-part"></div>
   </main>
 
 
@@ -38,37 +51,3 @@
 </body>
 </html>
 
-<!--
-    <main>
-    <header>
-      <h2>IP Address Tracker</h2>
-    </header>
-    <div class="ip-sec">
-      <input type="text" id="ip-add" class="ip-icon" placeholder="Search for any IP address or domain">
-      <input type="button" class="ip-btn">
-    </div>
-    <div class="ip-results">
-      <label>IP Address</label>
-      <p class="result-ip">
-
-      </p>
-      <label>Location</label>
-      <p class="result-loc">
-
-      </p>
-      <label>Timezone</label>
-      <p class="result-time">
-
-      </p>
-      <label>ISP</label>
-      <p class="result-isp">
-
-      </p>
-    </div>
-    <div id="map" class="map-part">
-      
-    </div>
-
-
-  </main>
--->

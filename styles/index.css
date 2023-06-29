@@ -6,43 +6,38 @@
 }
 
 main{
-    background-image: url(../images/pattern-bg-mobile.png);
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    position: absolute;
     display: flex;
     flex-direction: column;
-}
-
-header{
-    width: 100%;
-    height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    padding-top: 10vh;
- 
 }
 
 .ip-sec{
+    background-image: url(../images/pattern-bg-mobile.png);
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    min-height: 200px;
+    color: #fff;
 }
 
-#ip-add{
-    width: 80%;
-    height: 5vh;
-    border-radius: 5px;
-    border: none;
+.elements{
+    position: relative;
+    max-width: 280px;
+    margin: auto;
 }
+
 ::placeholder{
     padding-left: 8px;
     font-size: 15px;
     color: hsl(0, 0%, 17%);
+}
+.ip-icon{
+    padding: 5px;
+    min-width: 280px;
+    border-radius: 10px;
+    border: none;
 }
 .ip-btn{
     background-image: url(../images/icon-arrow.svg);
@@ -50,13 +45,13 @@ header{
     background-position: center;
     background-color: hsl(0, 0%, 17%);
     width: 33px;
-    height: 5vh;
+    height: 4vh;
     border: none;
-    border-radius: 5px;
-    position: relative;
-    top: -5vh;
-    left: 38vw;
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    cursor: pointer;
 }
+
 /* RESULTS */
 .map-result{
     position: relative;
@@ -64,48 +59,76 @@ header{
     height: 600px;
     overflow: hidden;
 }
-
 .ip-results{
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px;
     background-color: #fff;
-    width: 80%;
-    height: 110px;
-    margin: 0px 35px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    min-height: 130px;
     position: relative;
+    z-index: 1000;
+    padding: 30px;
+}
+
+.info-block{
+    border-bottom: 1px solid;
+    height: 80px; /*REVER PÓS JAVASCRIPT*/
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
+    padding: 0 10px;
 }
-.ip-results p{
-    margin-bottom: px;
+.info-block-last{
+    border-bottom: none;
+}
+.muted-title{
+    font-size: 10px;
+    text-transform: uppercase;
+}
+span.results{
+    font-weight: 500;
+    color: #2b2b2b;
+    font-size: 14px;
 }
 
 /* map */
 #map{
-    position: absolute;
+    margin-top: -90vh;
     width: 100%;
-    height: 400px;
+    height: 500px;
 }
 
 @media only screen and (min-width: 1000px){
-    main{
+    .ip-sec{
         background-image: url(../images/pattern-bg-desktop.png);
     }
-    header{
-        padding: 8vh 0;
-    }
-    #ip-add{
-        width: 40vw;
-    }
+
     ::placeholder{
         padding-left: 14px;
         font-size: 18px;
     }
+    .elements{
+        width: 350px;
+    }
+    .ip-icon{
+        width: 30vw;
+        height: 5vh;
+    }
     .ip-btn{
         background-image: url(../images/icon-arrow.svg);
         width: 45px;
-        left: 22vw;
+        height: 5vh;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        left: 30vw;
+        top: -1px;
     }
     .map-result{
         width: 100%;
@@ -124,7 +147,6 @@ header{
         align-items: center;
     }
     #map{
-        position: absolute;
         width: 100%;
         height: 600px;
     }
